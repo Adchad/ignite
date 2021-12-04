@@ -31,6 +31,10 @@ import org.jetbrains.annotations.Nullable;
 import static org.apache.ignite.events.EventType.EVT_CACHE_ENTRY_CREATED;
 import static org.apache.ignite.events.EventType.EVT_CACHE_ENTRY_DESTROYED;
 
+
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * Implementation of concurrent cache map.
  */
@@ -86,6 +90,14 @@ public abstract class GridCacheConcurrentMapImpl implements GridCacheConcurrentM
         final boolean create,
         final boolean skipReserve
     ) {
+        
+        try {
+            FileWriter myWriter = new FileWriter("/home/adam/test.txt", true);
+            myWriter.write("Ceci est un test\n");
+            myWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         if (hld == null)
             hld = entriesMapIfExists(ctx.cacheIdBoxed());
 
