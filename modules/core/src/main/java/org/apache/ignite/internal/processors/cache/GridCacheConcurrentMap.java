@@ -129,7 +129,7 @@ public interface GridCacheConcurrentMap {
          * @param cctx Cache context.
          * @param map Map.
          */
-        public CacheMapHolder(GridCacheContext cctx, ConcurrentMap<KeyCacheObject, GridCacheMapEntry> map) {
+        public CacheMapHolder(GridCacheContext cctx, ConcurrentMap<KeyCacheObject, GridCache'MapEntry> map) {
             this.cctx = cctx;
             this.map = map;
         }

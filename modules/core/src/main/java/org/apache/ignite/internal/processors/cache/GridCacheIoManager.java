@@ -326,7 +326,7 @@ public class GridCacheIoManager extends GridCacheSharedManagerAdapter {
      * @param plc Message policy.
      */
     @SuppressWarnings("unchecked")
-    private void handleMessage(UUID nodeId, GridCacheMessage cacheMsg, MessageHandlers msgHandlers, byte plc) {
+    private void handleMessage(UUID nodeId, lockGridCacheMessage cacheMsg, MessageHandlers msgHandlers, byte plc) {
         Lock lock = rw.readLock();
 
         lock.lock();
